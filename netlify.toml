@@ -1,6 +1,10 @@
 [build]
   publish = "apps/client/dist"
-  command = "pnpm install --frozen-lockfile && pnpm --filter=@bola/client run build"
+  command = "pnpm install && pnpm --filter=@bola/client run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "9.0.0"
 
 [[redirects]]
   from = "/*"
